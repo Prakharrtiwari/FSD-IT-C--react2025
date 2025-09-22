@@ -1,0 +1,175 @@
+/* Main container grid */
+.box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr 300px; 
+    gap: 10px;
+    padding: 10px;
+}
+
+/* ---------------- AMAZON STYLE HEADER ---------------- */
+
+/* Top Header */
+header {
+    grid-column: 1 / 5;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-image: -moz-linear-gradient("logoamazon.jpg", #131921, #232f3e);
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #131921;
+    color: white;
+    padding: 10px 20px;
+}
+
+.header-top .logo {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+.location {
+    font-size: 12px;
+    line-height: 1.2;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.location span {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search {
+    display: flex;
+    flex: 1;
+    max-width: 600px;
+    margin: 0 20px;
+}
+
+.search-category {
+    padding: 10px;
+    border: none;
+    background-color: #f3f3f3;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.search input {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+}
+
+.search-btn {
+    padding: 10px 15px;
+    background-color: #febd69;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.lang, .account, .orders, .cart {
+    margin-left: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.account span, .orders span {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.cart {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Bottom Navigation */
+.header-bottom {
+    background-color: #232f3e;
+    padding: 10px 20px;
+}
+
+.header-bottom ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    color: white;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.header-bottom ul li {
+    cursor: pointer;
+}
+
+.header-bottom ul li:hover {
+    text-decoration: underline;
+}
+
+/* ---------------- PRODUCT GRID ---------------- */
+
+.box1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-auto-rows: minmax(180px, auto);
+    gap: 15px;
+    padding: 10px;
+    background-color: aquamarine;
+    border-radius: 5px;
+}
+
+.box11, .box12, .box13, .box14 {
+    border: 1px solid red;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    transition: transform 0.2s, background-color 0.2s;
+    cursor: pointer;
+}
+
+.box11:hover, .box12:hover, .box13:hover, .box14:hover {
+    transform: scale(1.05);
+}
+
+.box11 img, .box12 img, .box13 img, .box14 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Main boxes (Box2, Box3, Box4) */
+.box2, .box3, .box4 {
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dotted red;
+    font-weight: bold;
+}
+
+.box2 img, .box3 img, .box4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box2 { background-color: beige; }
+.box3 { background-color: burlywood; }
+.box4 { background-color: chocolate; color: white; font-size: 18px; }

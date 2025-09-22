@@ -6,6 +6,34 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hii..i am going to work</h1>
+    <label>Enter name: </label>
+    <input type="text" placeholder="enter name" id="username">
+    <button onclick="getdata()">Get Data</button>
+
+    <div id="disp"></div> <!-- separate area to show result -->
+
+    <script>
+        function getdata() {
+            const myname = document.getElementById('username').value;
+
+            // Show as popup
+            alert("Hi " + myname);
+
+            // Also display on page
+            document.getElementById('disp').innerHTML = 
+                <h2 style="color:white; background-color:black">${myname}</h2>;
+        }
+    </script>
+    <!-- Add this button where you want -->
+<button onclick="showWelcome()">Show Welcome</button>
+
+<script>
+function showWelcome() {
+    document.getElementById('disp').innerHTML = 
+        `<h2 style="color:yellow; background-color:blue; padding:10px;">
+            Welcome to ABES Engineering College
+        </h2>`;
+}
+</script>
 </body>
 </html>
